@@ -12,6 +12,7 @@ myUrl="http://www.google.com"
 readonly myUrl
 myUrl="http://facebook.com"
 
+
 echo "#########delete variable###############"
 myUrl1="http://www.google.com"
 unset myUrl1
@@ -95,6 +96,14 @@ lenth=${#arrName[@]}
 lenth2=${#arrName[*]}
 lenthn=${#arName[5]}
 echo $lenth $lenth2 $lenthn
+
+echo "###########数组合并##############3"
+array1=(23 56)
+array2=(99 "http://www.aweb.cc")
+array_new=(${array1[@]} ${array2[*]})
+echo ${array_new[@]}  #也可以写作 ${array_new[*]}
+unset array_new[3]
+echo ${array_new[@]}
 
 echo "多行注释"
 :<<EOF
